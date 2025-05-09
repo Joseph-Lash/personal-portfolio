@@ -1,0 +1,93 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  background-color: #52597b;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar img {
+  height: 40px;
+  width: auto;
+  border: 2px solid #cccfe1;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #cccfe1;
+  font-weight: 500;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #1f2232;
+}
+
+/* Contact Button */
+.nav-connect a {
+  text-decoration: none;
+  color: #cccfe1;
+  border: 2px solid #cccfe1;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-connect a:hover {
+  background-color: #1f2232;
+  color: #cccfe1;
+}
+
+/* Mobile Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #cccfe1;
+  cursor: pointer;
+}
+
+/* Show menu toggle & collapse nav on mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 64px; /* adjust based on navbar height */
+    left: 0;
+    right: 0;
+    background-color: #1f2232;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-connect {
+    display: none;
+  }
+}

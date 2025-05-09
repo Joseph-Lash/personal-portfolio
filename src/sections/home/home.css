@@ -1,0 +1,80 @@
+.page {
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  background-color: #1f2232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Intro Section */
+.home-intro {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+}
+
+.home-intro h1 {
+  font-size: 3rem;
+  color: #cccfe1;
+  margin-bottom: 1rem;
+}
+
+.home-intro p {
+  font-size: 1.2rem;
+  color: #999;
+  line-height: 1.6;
+}
+
+/* Three Columns */
+.home-columns {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1 1 300px;
+  background-color: #cccfe1;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.column:hover {
+  transform: translateY(-5px);
+}
+
+.column h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1f2232;
+}
+
+.column p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive stacking for mobile/tablet */
+@media (max-width: 900px) {
+  .home-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    max-width: 100%;
+  }
+}
